@@ -1,0 +1,21 @@
+{
+  "name": "kafka-node",
+  "version": "1.0.0",
+  "private": true,
+  "description": "kafka in docker: see https://www.baeldung.com/ops/kafka-docker-setup",
+  "main": "index.js",
+  "scripts": {
+    "console-consumer": "kafka-console-consumer.sh --topic wk-test-1 --from-beginning --bootstrap-server localhost:29092",
+    "console-producer": "kafka-console-producer.sh --topic wk-test-1 --bootstrap-server localhost:29092",
+    "topics": "kafka-topics.sh  --bootstrap-server localhost:29092 --list"
+  },
+  "keywords": [],
+  "author": "Wolfram Kleis",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^8.34.0"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.3"
+  }
+}
