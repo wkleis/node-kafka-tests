@@ -10,7 +10,6 @@
     "topics": "kafka-topics.sh  --bootstrap-server localhost:29092 --list"
   },
   "keywords": [],
-  "author": "Wolfram Kleis",
   "license": "UNLICENSED",
   "devDependencies": {
     "eslint": "^8.34.0"
