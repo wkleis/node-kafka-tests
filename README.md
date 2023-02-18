@@ -1,12 +1,11 @@
 # node-kafka-tests
 
-playing around and first steps with accessing Kafka from node.js apps with kafkajs
+my very first steps with accessing Kafka from node.js apps with kafkajs
 
-kafkajs: https://kafka.js.org/docs/getting-started
+initially, this is basically the sample code from kafkajs documentation!
 
-initially, this is basically the code from kafkajs documentation!
+## Setup
 
-## Running a local Kafka
 
 ### Kafka in Docker
 
@@ -18,7 +17,13 @@ Kafka in docker: see https://www.baeldung.com/ops/kafka-docker-setup
 - `docker compose ps`
 - `docker-compose down`
 
-### Useful commands
+### Kafka command line tools
+
+
+- https://kafka.apache.org/quickstart 
+- add Kafka bin folder to path
+
+Useful Commands
 
 - `kafka-topics.sh  --bootstrap-server localhost:29092 --list`
 - `kafka-topics.sh  --bootstrap-server localhost:29092 --create --topic wk-test-1`
@@ -28,7 +33,11 @@ Kafka in docker: see https://www.baeldung.com/ops/kafka-docker-setup
 - `kafka-consumer-groups.sh --bootstrap-server localhost:29092 --list`
 - `kafka-consumer-groups.sh --bootstrap-server localhost:29092 --group test-group --delete`
 
-## Produce and Consume
+## Produce and Consume from Javascript
+
+- kafkajs: https://kafka.js.org/docs/getting-started
+
+commands
 
 - `node producer.js`
 - `node cosnumer.js`
