@@ -33,11 +33,24 @@ Useful Commands
 - `kafka-consumer-groups.sh --bootstrap-server localhost:29092 --list`
 - `kafka-consumer-groups.sh --bootstrap-server localhost:29092 --group test-group --delete`
 
-## Produce and Consume from Javascript
+## kafkajs
 
-- kafkajs: https://kafka.js.org/docs/getting-started
+see  https://kafka.js.org/docs/getting-started
+
+## Produce and Consume Events
+
+configuration: create a `.env` file like this:
+
+```properties
+KAFKA_TOPIC="my-test-topic"
+KAFKA_PRODUCER_CLIENT_ID="my-test-producer"
+KAFKA_CONSUMER_CLIENT_ID="my-test-consumer"
+KAFKA_CONSUMER_GROUP_ID="my-test-consumer"
+KAFKA_SERVER="localhost:29092"
+PORT=3001
+```
 
 commands
 
-- `node producer.js`
-- `node cosnumer.js`
+- `npm start` start small server which listens to kafa messages, stores them in an in-memmory array and returns it at http://localhost:3001/events
+- `npm run produce` produce a Kafka event with the configured topic

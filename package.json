@@ -5,9 +5,16 @@
   "description": "kafka in docker: see https://www.baeldung.com/ops/kafka-docker-setup",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "produce": "node producer.js",
     "console-consumer": "kafka-console-consumer.sh --topic wk-test-1 --from-beginning --bootstrap-server localhost:29092",
     "console-producer": "kafka-console-producer.sh --topic wk-test-1 --bootstrap-server localhost:29092",
-    "topics": "kafka-topics.sh  --bootstrap-server localhost:29092 --list"
+    "topics": "kafka-topics.sh  --bootstrap-server localhost:29092 --list",
+    "dc-up": "docker compose up -d",
+    "dc-stop": "docker compose stop",
+    "dc-start": "docker compose start",
+    "dc-down": "docker-compose down",
+    "dc-ps": "docker-compose ps"
   },
   "keywords": [],
   "license": "UNLICENSED",
@@ -15,6 +22,8 @@
     "eslint": "^8.34.0"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "kafkajs": "^2.2.3"
   }
 }
